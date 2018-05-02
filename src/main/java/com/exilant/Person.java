@@ -1,10 +1,22 @@
 package com.exilant;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
+
+@Document(collection="Person_Collection")
+//@JsonIgnoreType(value=true)
 public class Person {
 
+	@Id
 	private String id;
 	private String name;
 	private int age;
+	
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public Person(String name, int age) {
 		super();
