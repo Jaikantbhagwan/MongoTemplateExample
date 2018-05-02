@@ -31,7 +31,6 @@ public class MongoConfig {
 	@Bean
 	public MongoTemplate mongoTemplate() throws Exception {
 		MongoTypeMapper typeMapper = new DefaultMongoTypeMapper(null);	
-        //MappingMongoConverter converter = new MappingMongoConverter(mongoDbFactory(), new MongoMappingContext());
 		MappingMongoConverter converter = new MappingMongoConverter(mongoDbFactory(), new MongoMappingContext());
         converter.setTypeMapper(typeMapper);
  
