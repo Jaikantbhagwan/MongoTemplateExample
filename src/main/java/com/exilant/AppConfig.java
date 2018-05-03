@@ -17,7 +17,7 @@ import com.mongodb.MongoClient;
 
 @Configuration
 public class AppConfig {
-	@Autowired 
+	 @Autowired 
 	 MongoDbFactory mongoDbFactory;
 	 
 	 @Autowired

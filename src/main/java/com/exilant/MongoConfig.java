@@ -1,5 +1,6 @@
 package com.exilant;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.MongoDbFactory;
@@ -24,7 +25,7 @@ public class MongoConfig {
 	}
  
 	@Bean
-	public MongoDbFactory mongoDbFactory() throws Exception {
+	public MongoDbFactory mongoDbFactory() throws Exception {		
 		return new SimpleMongoDbFactory(mongoDbClient(), "test");
 	}
  
